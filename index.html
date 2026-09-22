@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#fdf6e3" />
+    <meta name="description" content="微信即开即玩的网页版羊了个羊：多层叠放方块三消小游戏" />
+    <title>羊了个羊</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 选关页 -->
+      <section id="screen-levels" class="screen active">
+        <h1 class="screen-title">羊了个羊</h1>
+        <p class="screen-sub">点击方块收入槽位，集满 3 个相同图案即可消除，清空全场过关！</p>
+        <div class="inventory-line" id="inventory-line"></div>
+        <div class="level-list" id="level-list"></div>
+        <button class="btn-clear-save" id="btn-clear-save">清除本地进度</button>
+      </section>
+
+      <!-- 游戏页 -->
+      <section id="screen-game" class="screen">
+        <div class="topbar">
+          <button class="btn" id="btn-back">‹ 选关</button>
+          <div class="title" id="game-title">第 1 关</div>
+          <div class="stat" id="game-remain">剩余 0</div>
+        </div>
+        <div id="buffer-zone"></div>
+        <div id="board-viewport">
+          <div id="board"></div>
+        </div>
+        <div class="footer">
+          <div id="slot"></div>
+          <div id="toolbar"></div>
+        </div>
+      </section>
+
+      <!-- 弹窗层 -->
+      <div id="overlay-root"></div>
+      <div id="toast-root"></div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
